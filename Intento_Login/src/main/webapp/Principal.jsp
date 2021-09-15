@@ -4,19 +4,38 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Menu Admin</title>
 </head>
 <body>
-<h1>Menu Principal</h1>
-<%
-String nombre=request.getParameter("nom");
-%>
-<h2>Bienvenido: <%=nombre %> </h2>
-<ul>
-<li>Usuario</li>
-<li>Clientes</li>
-<li>Productos</li>
-<li>Proveedores</li>
-</ul>
+
+<header>
+
+
+   
+    <h1 class="e_h1">Menu Principal - Tienda Organica</h1>
+    <%
+    String nombre=request.getParameter("nom");
+    %>
+    <h2>Bienvenido: <%=nombre %> </h2>
+    <nav>
+        
+        <ul>
+            <li> <a href="Registro.jsp">Usuario</a></li>
+            <li> <a href="#">Clientes</a></li>
+            <li> <a href="#">Productos</a></li>
+            <li> <a href="#">Proveedores</a></li>
+            <li> <a href="#">Ventas</a></li>
+            <li> <a href="#">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="e_h1">Menu Principal - Tienda Organica</h1>
+    <%
+    String nombre=request.getParameter("nom");
+    %>
+    <h2>Bienvenido: <%=nombre %> </h2>
+
+
+</header>
 </body>
 </html>

@@ -26,32 +26,33 @@ public class Control_login extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usuario,password;
-		String Rnombre,Rcorreo,Rcontraseña;
+		String Rnombre,Rcorreo,Rcontrasenia;
 		String Usuarios[]= new String[3];
 		
 		if (request.getParameter("Registro")!=null) {
 			usuario=request.getParameter("Correo");
-			password=request.getParameter("Contraseña");
-			if(usuario.equals("Julian") && password.equals("12345")) {
-				JOptionPane.showMessageDialog(null, "Bienvenido");
+			password=request.getParameter("Contrasenia");
+			if(usuario.equals("admininicial") && password.equals("admin123456")) {
+				JOptionPane.showMessageDialog(null, "Bienvenido Administrador");
 				response.sendRedirect("Principal.jsp?nom"+usuario);
 			}else if(usuario==Usuarios[0] && password==Usuarios[2]) {
 				JOptionPane.showMessageDialog(null, "Bienvenido");
-				response.sendRedirect("Principal.jsp?nom"+usuario);
+				response.sendRedirect("Principal.jsp?nom="+usuario);
 			} else{
 				JOptionPane.showMessageDialog(null, "Datos Incorrectos");
 				response.sendRedirect("Login.jsp");
 			}
 				
 		}
+
 		if (request.getParameter("CrearUsuario")!=null) {
 			Rnombre=request.getParameter("Rnombre");
 			Rcorreo=request.getParameter("Rcorreo");
-			Rcontraseña=request.getParameter("Rcontraseña");
+			Rcontraseï¿½a=request.getParameter("Rcontrasenia");
 			Usuarios[0]=Rnombre;
 			Usuarios[1]=Rcorreo;
-			Usuarios[2]=Rcontraseña;
-			if(Rnombre==Usuarios[0] && Rcorreo==Usuarios[1] && Rcontraseña==Usuarios[2]){
+			Usuarios[2]=Rcontrasenia;
+			if(Rnombre==Usuarios[0] && Rcorreo==Usuarios[1] && Rcontrasenia==Usuarios[2]){
 				JOptionPane.showMessageDialog(null,"Usuario Creado Correctamente");
 				response.sendRedirect("Login.jsp");
 			}else {
