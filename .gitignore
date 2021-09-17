@@ -33,3 +33,4 @@ carolay/
 
 # Eclipse shit
 .project 
+.settings/
