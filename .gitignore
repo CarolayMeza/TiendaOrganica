@@ -22,8 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+# Secrets file
+.env
+
 # directorio por carolay
 carolay/
 
+#not need this file
+.DS_Store
 
-
+# Eclipse shit
+.project 
