@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Website</title>
   </head>
+  <!--IMPLEMENTACIóN DEL MENú-->
   <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -48,9 +49,15 @@
     </div>
   </nav>
   <section class="Form my-3 mx-7">
+      <!--Los container se utilizan para contener, rellenar y (a veces) centrar el contenido dentro de ellos. -->
     <div class="container">
+        <!--Con row puedo establecer mis filas-->
         <div class="row no-gutters">
+            <!--Col son mis columnas y en ellas puedo establecer su tama;o -->
             <div class="col-lg-5">
+                <!--iniciamos con img para decir que aqui ire una imagen le establecemos donde style hace referencia a como quiero que tenga el borde mi imagen en este caso le estamos dando 
+                acabados redonod a las puntas, class hace referencia a como queremos que nuestra imagen actue en este caso queremos que se ajuste a nuestra pagina principal y de esta manera se adapta 
+            en tama;o-->
                 <img style="border-radius: 20px;" class="img-responsive" src="./Imagen/cafe1.jpg" alt="">
             </div>
             <div class="col-lg-7 px-5 pt-5">
@@ -58,7 +65,7 @@
                 <form>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="cedula" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="cédula" class="form-control my-3 p-4">   
                         </div>
                     </div>
                     <div class="from-row">
@@ -83,10 +90,11 @@
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <button type="button" class="btn1 mt-3px mb-5">consultar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">crear</button>
-                            <button type="button" class="btn1 mt-3px mb-5">altualizar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">borrar</button>
+
+                            <button type="button" class="btn btn-success">consultar</button>
+                            <button type="button" class="btn btn-success">crear</button>
+                            <button type="button" class="btn btn-success">altualizar</button>
+                            <button type="button" class="btn btn-success">borrar</button>
                         </div>
                     </div>
                 </form>
