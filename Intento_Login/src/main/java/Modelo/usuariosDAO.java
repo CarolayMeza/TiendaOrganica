@@ -20,11 +20,11 @@ public class usuariosDAO {
 		try {
 		String sql="insert into Usuarios values(?,?,?,?,?)";
 		ps = con.prepareStatement(sql);
-		ps.setString(1, user.getNombre());
 		ps.setString(1, user.getCedula());
 		ps.setString(2, user.getCorreo());
-		ps.setString(3, user.getContrasenia());
-		ps.setString(4, user.getConfirm_contrasenia());
+			ps.setString(3, user.getNombre());
+		ps.setString(4, user.getContrasenia());
+		ps.setString(5, user.getUsers());
 		
 		resul=ps.executeUpdate()>0;	
 		}catch(SQLException ex) {
@@ -54,16 +54,32 @@ public class usuariosDAO {
 	public boolean Actualizar_Usuario(usuariosDTO user) {
 	    boolean resul=false;
 		try {
-		String sql="update Usuarios set nombre_usuario=?, email_usuario=?, password=?, password_confirm=? where cedula_usuario=?";
+		String sql="update Usuarios set  email_usuario=?, nombre_usuario=?, password=?,usuario=? where cedula_usuario=?";
 		ps = con.prepareStatement(sql);
-		ps.setString(1, user.getNombre());
-		ps.setString(2, user.getCorreo());
+		
+		ps.setString(1, user.getCorreo());
+		ps.setString(2, user.getNombre());
 		ps.setString(3, user.getContrasenia());
-		ps.setString(4, user.getConfirm_contrasenia());
-		ps.setString(5, user.getCedula());
+		ps.setString(4, user.getUsers());
+		ps.setString(5,user.getCedula());
 		resul=ps.executeUpdate()>0;	
 		}catch(SQLException ex) {
 			JOptionPane.showMessageDialog(null,"error al actualizar: "+ex);
+		}
+		return resul;
+	}
+	
+	public boolean Eliminar_Usuario(String auxcedula) {
+	    boolean resul=false;
+		try {
+		String sql="delete from Usuarios where cedula_usuario=?";
+		ps = con.prepareStatement(sql);
+
+		ps.setString(1,auxcedula);
+		resul=ps.executeUpdate()>0;	
+		JOptionPane.showMessageDialog(null, "Se elimino el usuario");
+		}catch(SQLException ex) {
+			JOptionPane.showMessageDialog(null,"error al eliminar: "+ex);
 		}
 		return resul;
 	}

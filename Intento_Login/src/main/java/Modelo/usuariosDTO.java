@@ -1,17 +1,19 @@
 package Modelo;
 
 public class usuariosDTO {
-   private String nombre;
    private String cedula;
    private String correo;
+   private String nombre;
    private String contrasenia;
-   private String confirm_contrasenia;
-public usuariosDTO(String nombre,String Cedula, String correo, String contrasenia, String confirm_contrasenia) {
-	super();
-	this.nombre = nombre;
+   private String users;
+
+public usuariosDTO(String cedula,String correo, String nombre, String contrasenia, String users) {
+	
+	this.cedula=cedula;
 	this.correo = correo;
-	this.contrasenia = contrasenia;
-	this.confirm_contrasenia = confirm_contrasenia;
+	this.nombre = nombre;
+	this.contrasenia = contrasenia;	
+	this.users=users;
 }
 public String getNombre() {
 	return nombre;
@@ -31,18 +33,19 @@ public String getContrasenia() {
 public void setContrasenia(String contrasenia) {
 	this.contrasenia = contrasenia;
 }
-public String getConfirm_contrasenia() {
-	return confirm_contrasenia;
-}
-public void setConfirm_contrasenia(String confirm_contrasenia) {
-	this.confirm_contrasenia = confirm_contrasenia;
-}
+
 public String getCedula() {
 	return cedula;
 }
 public void setCedula(String cedula) {
 	this.cedula = cedula;
 }
-   
+public String getUsers() {
+	return users;
+}
+public void setUsers(String users) {
+	this.users = users;
+}
+  
    
 }

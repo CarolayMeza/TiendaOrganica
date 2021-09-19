@@ -17,6 +17,53 @@
     <title>Website</title>
   </head>
   <body>
+  
+  
+  
+  
+  
+  <%!String mensaje="";
+  String cedula="",direccion="",correo="",nombre="",estado="",telefono="";
+
+%>
+
+<%
+if(request.getParameter("cedula")!=null){
+direccion= request.getParameter("direccion");
+cedula=request.getParameter("cedula");
+correo=request.getParameter("correo");
+nombre=request.getParameter("nombre");
+telefono=request.getParameter("telefono");
+
+
+estado="disabled";
+}
+%>
+<%
+if(request.getParameter("men")!=null){
+cedula="";
+direccion="";
+correo="";
+nombre="";
+telefono="";
+estado="";
+
+mensaje=request.getParameter("men");
+}
+%>
+  
+  <%
+if (request.getParameter("men")!=null)
+mensaje = request.getParameter("men");
+%>
+  
+  
+  
+  
+  
+  
+  
+  
     <nav class="navbar navbar-expand-lg">
         <div class="container">
         <a class="tiendavirtual" href="Organic.html"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>
@@ -55,38 +102,44 @@
             </div>
             <div class="col-lg-7 px-5 pt-5">
                 <h1 style="color:#FFFFFF" class="font-weight-bold py-3">Ingrese sus datos</h1>
-                <form>
+                <form action= "controlador_clientes" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="cedula" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="cédula" class="form-control my-3 p-4 "name="cedula" value="<%=cedula%>">   
                         </div>
                     </div>
+                    
+                     <div class="from-row">
+                        <div class="col-lg-7">
+                            <input type="text" placeholder="dirección" class="form-control my-3 p-4" name="direccion" value="<%=direccion%>">
+                        </div>
+                    </div>
+          
                     <div class="from-row">
-                        <div class="col-lg-7" type="text" placeholder="name" aria-label="name">
+                        <div class="col-lg-7">
+                            <input type="email" placeholder="correo electrónico" class="form-control my-3 p-4" name="correo"value="<%=correo%>" >
+                        </div>
+                    </div>
+          
+                    <div class="from-row">
+                        <div class="col-lg-7" type="text" placeholder="name" aria-label="name" name="nombre"value="<%=nombre%>">
                             <input type="text" placeholder="nombre completo" class="form-control my-3 p-4">   
                         </div>
                     </div>
+                   
+                    
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="direcciÃ³n" class="form-control my-3 p-4">
+                            <input type="text" placeholder="teléfono" class="form-control my-3 p-4"name="telefono"value="<%=telefono%>">   
                         </div>
                     </div>
+                   
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="telefono" class="form-control my-3 p-4">   
-                        </div>
-                    </div>
-                    <div class="from-row">
-                        <div class="col-lg-7">
-                            <input type="email" placeholder="correo electronico" class="form-control my-3 p-4">
-                        </div>
-                    </div>
-                    <div class="from-row">
-                        <div class="col-lg-7">
-                            <button type="button" class="btn1 mt-3px mb-5">consultar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">crear</button>
-                            <button type="button" class="btn1 mt-3px mb-5">altualizar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">borrar</button>
+                            <button type="submit" class="btn btn-success" name="buscar">consultar</button>
+                            <button type="submit" class="btn btn-success"name="crear">crear</button>
+                            <button type="submit" class="btn btn-success"name="actualizar">actualizar</button>
+                            <button type="submit" class="btn btn-success"name="borrar">borrar</button>
                         </div>
                     </div>
                 </form>

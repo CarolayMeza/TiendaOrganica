@@ -9,7 +9,7 @@ public class Conexion {
 
 	private String bd="Tienda_Organica";
 	private String url="jdbc:mysql://localhost:3306/"+bd;
-	private String user="";
+	private String user="root";
 	private String pass="";
 	Connection conec=null;
 	
