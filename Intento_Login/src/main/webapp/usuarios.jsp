@@ -58,30 +58,36 @@
                 <form>
                     <div class="from-row">
                         <div class="col-lg-7" type="text" placeholder="name" aria-label="name">
-                            <input type="text" placeholder="nombre completo" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="nombre completo" class="form-control my-3 p-4"name="nombre">   
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="correo electronico" class="form-control my-3 p-4">
+                            <input type="text" placeholder="cedula" class="form-control my-3 p-4" name="cedula">
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="password" placeholder="contraseña" class="form-control my-3 p-4">
+                            <input type="email" placeholder="correo electronico" class="form-control my-3 p-4"name="correo">
+                        </div>
+                    </div>
+                    
+                    <div class="from-row">
+                        <div class="col-lg-7">
+                            <input type="password" placeholder="contraseña" class="form-control my-3 p-4" name="password">
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="password" placeholder="confirmar contraseña" class="form-control my-3 p-4">
+                            <input type="password" placeholder="confirmar contraseña" class="form-control my-3 p-4"name="confirm_password">
                         </div>
                     </div>
                     <div class="from-row">
                       <div class="col-lg-7">
-                          <button type="button" class="btn1 mt-3px mb-5">consultar</button>
-                          <button type="button" class="btn1 mt-3px mb-5">crear</button>
-                          <button type="button" class="btn1 mt-3px mb-5">altualizar</button>
-                          <button type="button" class="btn1 mt-3px mb-5">borrar</button>
+                          <button type="button" class="btn1 mt-3px mb-5" name="buscar">consultar </button>
+                          <button type="button" class="btn1 mt-3px mb-5" name="crear">crear</button>
+                          <button type="button" class="btn1 mt-3px mb-5"name="actualizar">actualizar</button>
+                          <button type="button" class="btn1 mt-3px mb-5" name="borrar">borrar</button>
                       </div>
                   </div>
                     
