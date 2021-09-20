@@ -3,29 +3,34 @@
     margin: 0;
     box-sizing: border-box;
 }
-.tienda-organica{
-    font-size: 3rem;
-    font-family: 'Lobster', cursive;
-    color: rgb(0, 0, 0);
-}
-.productos{
+
+
+.propiedades{
     margin-right: 20px;
     margin-left: 20px;
     font-family: 'Overlock', cursive;
     color: rgb(30, 139, 78);
     text-transform: uppercase;
-
 }
 .navbar-brand:hover{
     color: black;
 }
-.sobre-nosotros{
+.registro-usuarios{
     margin-right: 20px;
     margin-left: 20px;
     font-family: 'Overlock', cursive;
     color: rgb(30, 139, 78);
     text-transform: uppercase;
 }
+
+.ingreso-admi{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Overlock', cursive;
+    color: rgb(30, 139, 78);
+    text-transform: uppercase;
+}
+
 .contacto{
     margin-right: 20px;
     margin-left: 20px;
@@ -56,7 +61,7 @@
     font-weight: 700;
 }
 .main{
-    background: url(./Imagen/chococafe.jpg)no-repeat;
+    background: url(./Imagen/cafe1.jpg)no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
@@ -82,4 +87,6 @@
     border-radius: 60px;
 
 }
-
+h1{
+    font-weight: 700;
+}
