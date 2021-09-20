@@ -57,16 +57,16 @@ mensaje=request.getParameter("men");
           <a class="tiendavirtual" href="Organic.html"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav m-auto my-2 my-lg-0">
-              <a class="propiedades" href="usuarios.html">Usuarios</a>
+              <a class="propiedades" href="usuarios.jsp">Usuarios</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="clientes.html">Clientes</a>
+              <a class="propiedades" href="clientes.jsp">Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="proveedores.html">Proveedores</a>
+              <a class="propiedades" href="proveedores.jsp">Proveedores</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="productos.html">productos</a>
+              <a class="propiedades" href="productos.jsp">productos</a>
             </li>
             <li class="nav-item">
               <a class="propiedades" href="#">Ventas</a>
@@ -75,7 +75,7 @@ mensaje=request.getParameter("men");
               <a class="propiedades" href="#">Reportes</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="ingresoadmi.html">Ingreso Administrador</a>
+              <a class="propiedades" href="ingresoadmi.jsp">Ingreso Administrador</a>
             
           </ul>
 
@@ -110,7 +110,7 @@ mensaje=request.getParameter("men");
                     
                   <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="password" placeholder="contraseÃ±a" class="form-control my-3 p-4" name="password"value="<%=password%>" >
+                            <input type="password" placeholder="contraseña" class="form-control my-3 p-4" name="password"value="<%=password%>" >
                         </div>
                   </div>
                     

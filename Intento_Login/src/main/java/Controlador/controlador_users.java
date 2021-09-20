@@ -41,7 +41,7 @@ public class controlador_users extends HttpServlet {
 	
 		cedulaAux = request.getParameter("cedula");
 		correo = request.getParameter("correo");
-			nombre = request.getParameter("nombre");
+			nombre= request.getParameter("nombre");
 		contrasenia = request.getParameter("password");
 		auxUsuarios=request.getParameter("users");
 		

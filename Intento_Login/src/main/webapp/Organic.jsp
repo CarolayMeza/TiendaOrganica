@@ -25,16 +25,16 @@
         
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav m-auto my-2 my-lg-0">
-              <a class="propiedades" href="usuarios.html">Usuarios</a>
+              <a class="propiedades" href="usuarios.jsp">Usuarios</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="clientes.html">Clientes</a>
+              <a class="propiedades" href="clientes.jsp">Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="proveedores.html">Proveedores</a>
+              <a class="propiedades" href="proveedores.jsp">Proveedores</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="productos.html">productos</a>
+              <a class="propiedades" href="productos.jsp">productos</a>
             </li>
             <li class="nav-item">
               <a class="propiedades" href="#">Ventas</a>
@@ -43,7 +43,7 @@
               <a class="propiedades" href="#">Reportes</a>
             </li>
             <li class="nav-item">
-              <a class="propiedades" href="ingresoadmi.html">Ingreso Administrador</a>
+              <a class="propiedades" href="ingresoadmi.jsp">Ingreso Administrador</a>
             
           </ul>
           

@@ -44,7 +44,7 @@ public class controlador_clientes extends HttpServlet {
 		cedula = request.getParameter("cedula");
 		direccion = request.getParameter("direccion");
 		correo = request.getParameter("correo");
-		nombre= request.getParameter("nombre");
+		nombre=request.getParameter("nombre");
 		telefono=request.getParameter("telefono");
 		
 		clientesDTO clientDto = new clientesDTO(cedula,direccion,correo,nombre,telefono);

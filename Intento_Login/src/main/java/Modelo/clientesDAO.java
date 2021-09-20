@@ -15,16 +15,16 @@ public class clientesDAO {
 	PreparedStatement ps= null;
 	ResultSet res= null;
 	
-	public boolean Crear_Cliente(clientesDTO user) {
+	public boolean Crear_Cliente(clientesDTO clientes) {
 	    boolean resul=false;
 		try {
 		String sql="insert into Clientes values(?,?,?,?,?)";
 		ps = con.prepareStatement(sql);
-		ps.setString(1, user.getCedula());
-		ps.setString(2, user.getDireccion());
-		ps.setString(3, user.getCorreo());
-		ps.setString(4, user.getNombre());
-		ps.setString(5, user.getTelefono());
+		ps.setString(1, clientes.getCedula());
+		ps.setString(2, clientes.getDireccion());
+		ps.setString(3, clientes.getCorreo());
+		ps.setString(4, clientes.getNombre());
+		ps.setString(5, clientes.getTelefono());
 		resul=ps.executeUpdate()>0;	
 		JOptionPane.showMessageDialog(null," insertado ");
 		}catch(SQLException ex) {
