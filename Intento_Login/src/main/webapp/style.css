@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.propiedades{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Overlock', cursive;
+    color: rgb(30, 139, 78);
+    text-transform: uppercase;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.registro-usuarios{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Overlock', cursive;
+    color: rgb(30, 139, 78);
+    text-transform: uppercase;
+}
+
+.ingreso-admi{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Overlock', cursive;
+    color: rgb(30, 139, 78);
+    text-transform: uppercase;
+}
+
+.contacto{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: 'Overlock', cursive;
+    color: rgb(30, 139, 78);
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: black;
+
+}
+.search{
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+    border: 2px solid rgb(39, 174, 96);
+}
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: rgb(39, 174, 96);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+.main{
+    background: url(./Imagen/cafe1.jpg)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+
+}
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color:white;
+}
+.main p{
+    color:white;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(20, 90, 50);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+
+}
+h1{
+    font-weight: 700;
+}
