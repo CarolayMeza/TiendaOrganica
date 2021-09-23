@@ -32,7 +32,6 @@ nombre= request.getParameter("nombre");
 cedula=request.getParameter("cedula");
 correo=request.getParameter("correo");
 password=request.getParameter("password");
-
 users=request.getParameter("users");
 estado="disabled";
 }

@@ -57,13 +57,6 @@ if (request.getParameter("men")!=null)
 mensaje = request.getParameter("men");
 %>
   
-  
-  
-  
-  
-  
-  
-  
     <nav class="navbar navbar-expand-lg">
         <div class="container">
         <a class="tiendavirtual" href="Organic.html"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>

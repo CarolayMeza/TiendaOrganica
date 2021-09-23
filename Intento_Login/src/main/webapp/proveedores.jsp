@@ -17,6 +17,40 @@
     <title>Website</title>
   </head>
   <body>
+  
+  <%!String mensaje="";
+  String nit="",ciudad="",direccion="",nombre="",telefono="",estado="";
+%>
+
+<%
+if(request.getParameter("nit")!=null){
+nit= request.getParameter("nit");
+ciudad=request.getParameter("ciudadp");
+direccion=request.getParameter("direccionp");
+nombre=request.getParameter("nombrep");
+telefono=request.getParameter("telefonop");
+estado="disabled";
+}
+%>
+<%
+if(request.getParameter("men")!=null){
+nit="";
+ciudad="";
+direccion="";
+nombre="";
+telefono="";
+estado="";
+
+mensaje=request.getParameter("men");
+}
+%>
+  
+  <%
+if (request.getParameter("men")!=null)
+mensaje = request.getParameter("men");
+%>
+  
+  
     <nav class="navbar navbar-expand-lg">
         <div class="container">
         <a class="tiendavirtual" href="Organic.html"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>
@@ -55,38 +89,38 @@
             </div>
             <div class="col-lg-7 px-5 pt-5">
                 <h1 style="color:#FFFFFF" class="font-weight-bold py-3">Ingrese sus datos</h1>
-                <form>
+                <form action="controlador_proveedores" method="post">
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="NIT" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="NIT" class="form-control my-3 p-4" name="nit" value="<%=nit%>">   
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7" type="text" placeholder="name" aria-label="name">
-                            <input type="text" placeholder="nombre proveedor" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="ciudad proveedor" class="form-control my-3 p-4" name="ciudadp" value="<%=ciudad%>">   
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="dirección" class="form-control my-3 p-4">
+                            <input type="email" placeholder="direccion" class="form-control my-3 p-4" name="direccionp" value="<%=direccion%>">
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="telefono" class="form-control my-3 p-4">   
+                            <input type="text" placeholder="nombre"  class="form-control my-3 p-4" name="nombrep" value="<%=nombre%>">   
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="text" placeholder="ciudad" class="form-control my-3 p-4">
+                            <input type="text" placeholder="telefono"  class="form-control my-3 p-4" name="telefonop" value="<%=telefono%>">
                         </div>
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <button type="button" class="btn1 mt-3px mb-5">consultar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">crear</button>
-                            <button type="button" class="btn1 mt-3px mb-5">altualizar</button>
-                            <button type="button" class="btn1 mt-3px mb-5">borrar</button>
+                            <button type="submit" class="btn btn-success" name="consultar">consultar</button>
+                            <button type="submit" class="btn btn-success"name="crear">crear</button>
+                            <button type="submit" class="btn btn-success"name="actualizar">actualizar</button>
+                            <button type="submit" class="btn btn-success"name="borrar">borrar</button>
                         </div>
                     </div>
                 </form>

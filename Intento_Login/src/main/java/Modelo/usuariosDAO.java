@@ -18,17 +18,17 @@ public class usuariosDAO {
 	public boolean Crear_Usuario(usuariosDTO user) {
 	    boolean resul=false;
 		try {
-		String sql="insert into Usuarios values(?,?,?,?,?)";
-		ps = con.prepareStatement(sql);
-		ps.setString(1, user.getCedula());
-		ps.setString(2, user.getCorreo());
+			String sql="Insert into Usuarios values(?,?,?,?,?)";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, user.getCedula());
+			ps.setString(2, user.getCorreo());
 			ps.setString(3, user.getNombre());
-		ps.setString(4, user.getContrasenia());
-		ps.setString(5, user.getUsers());
-		
-		resul=ps.executeUpdate()>0;	
+			ps.setString(4, user.getContrasenia());
+			ps.setString(5, user.getUsers());
+			resul = ps.executeUpdate()>0;
+			JOptionPane.showMessageDialog(null, "Exito al insertar");
 		}catch(SQLException ex) {
-			JOptionPane.showMessageDialog(null,"error al insertar: "+ex);
+			JOptionPane.showMessageDialog(null, "Error al insertar"+ ex);
 		}
 		return resul;
 	}

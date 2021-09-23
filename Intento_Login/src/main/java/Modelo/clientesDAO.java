@@ -54,16 +54,16 @@ public class clientesDAO {
 	public boolean Actualizar_Cliente(clientesDTO user) {
 	    boolean resul=false;
 		try {
-		String sql="update Clientes set direccion_cliente=?, email_cliente=?,nombre_cliente=?,telefono_cliente=? where cedula=?";
+		String sql="update Clientes set direccion_cliente=?, email_cliente=?,nombre_cliente=?, telefonono_cliente=? where cedula=?";
 		ps = con.prepareStatement(sql);
 		
 		ps.setString(1, user.getDireccion());
 		ps.setString(2, user.getCorreo());
 		ps.setString(3, user.getNombre());
 		ps.setString(4, user.getTelefono());
-		ps.setString(5,user.getCedula());
-		resul=ps.executeUpdate()>0;	
-		JOptionPane.showMessageDialog(null, "Cliente Actualizado");
+		ps.setString(5, user.getCedula());
+		resul = ps.executeUpdate()>0;
+		JOptionPane.showMessageDialog(null, "Se actualizo");
 		}catch(SQLException ex) {
 			JOptionPane.showMessageDialog(null,"error al actualizar: "+ex);
 		}
