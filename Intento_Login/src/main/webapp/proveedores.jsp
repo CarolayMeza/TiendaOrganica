@@ -68,7 +68,7 @@
                     </div>
                     <div class="from-row">
                         <div class="col-lg-7">
-                            <input type="email" placeholder="dirección" class="form-control my-3 p-4">
+                            <input type="email" placeholder="direccion" class="form-control my-3 p-4">
                         </div>
                     </div>
                     <div class="from-row">
