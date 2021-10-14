@@ -145,4 +145,10 @@ a{
 	color: white;
 	text-transform: uppercase;
 }
+.col{
+	border-collapse: collapse;
+    width: 100%;
+    color: white;
+
+	}
 

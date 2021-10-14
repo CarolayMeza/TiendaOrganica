@@ -134,19 +134,19 @@ mensaje = request.getParameter("men");
 
 
 								<div class="col-sm my-3">
-									<button type="submit" class="btn1 mt-3px mb-5" name="buscar"
+									<button type="submit" class="btn btn-success mt-3px mb-5" name="buscar"
 										value="buscar">consultar</button>
 								</div>
 								<div class="col-sm my-3">
-									<button type="submit" class="btn1 mt-3px mb-5" name="crear"
+									<button type="submit" class="btn btn-success mt-3px mb-5" name="crear"
 										value="Crear">crear</button>
 								</div>
 								<div class="col-sm my-3">
-									<button type="submit" class="btn1 mt-3px mb-5"
+									<button type="submit" class="btn btn-success mt-3px mb-5"
 										name="actualizar" value="Actualizar">actualizar</button>
 								</div>
 								<div class="col-sm my-3">
-									<button type="submit" class="btn1 mt-3px mb-5" name="borrar"
+									<button type="submit" class="btn btn-success mt-3px mb-5" name="borrar"
 										value="borrar">borrar</button>
 								</div>
 							</div>

@@ -18,36 +18,57 @@
 
 <body class="Form my-3 mx-7" style="background: url(Imagen/cafe1.jpg)">
 
-	<div class="container"></div>
-	<div class="row my-3">
-		<div class="col-sm my-3 text-center">
-			<button   class="listaUsuarios"  class="btn btn-success col-sm">Listar usuarios</button>
-			<label>Mensaje:</label><input type="text" id="mensaje"> 
-				<!-- <a class="btn btn-success col-sm" type="button" href="lisusuarios.jsp"> -->
-				
 
+	<div class="container my-3 mx-7">
+		<div class="row my-3 mx-7">
+
+			<div class="col-sm my-3 text-center my-3 mx-7">
+				<button class="listaUsuarios btn btn-success"
+					class="btn btn-success col-sm" id="mensaje">Listar
+					usuarios</button>
+			</div>
+
+			<div class="col-sm my-3 text-center my-3 mx-7">
+				<button class="listaClientes  btn btn-success" id="mensaje1">Listar
+					clientes</button>
+
+			</div>
+
+			<div class="col-sm my-3 text-center my-3 mx-7">
+				<a class="btn btn-success col-sm" type="button"
+					href="venclientes.jsp"> Venta por cliente</a>
+
+			</div>
 		</div>
 	</div>
-	<div class="col-sm my-3 text-center">
-	<button   class="listaClientes"  class="btn btn-success col-sm">Listar clientes</button>
-	<label>Mensaje:</label><input type="text" id="mensaje1"> 
-						<!-- <a class="btn btn-success col-sm" type="button" href="lisclientes.jsp"> -->
-	
+	<div class="container">
+		<div class="row">
+				<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
+					de usuarios</h1>
+					<table id="tabla1" style="color: white"
+				class="font-weight-bold py-3 text-center">
+
+			</table>
+		</div>
 	</div>
 
-	<div class="col-sm my-3 text-center">
-		<a class="btn btn-success col-sm" type="button" href="venclientes.jsp">
-			Venta por cliente</a>
-
+	<div class="container">
+		<div class="row">
+			<h1 style="color: White" class="font-weight-bold py-3 text-center">Listado
+				de clientes</h1>
+			<table id="tabla2" style="color: white"
+				class="font-weight-bold py-3 text-center">
+			</table>
+		</div>
 	</div>
-
-<table id="tabla1" >
-
- </table>
-
-<table id="tabla2">
-
- </table>
-
+	<div class="container">
+		<div class="row">
+			<h1 style="color: White" class="font-weight-bold py-3 text-center">Venta
+				por cliente</h1>
+			<table id="#" style="color: white"
+				class="font-weight-bold py-3 text-center">
+			</table>
+		</div>
+	</div>
 
 </body>
