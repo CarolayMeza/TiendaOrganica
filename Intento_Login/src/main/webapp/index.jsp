@@ -1,39 +1,103 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <jsp:include page="link/link.jsp"/>
-    </head>
-    <body style="background: url(Imagen/cafe1.jpg)">
+<!--   <meta http-equiv="refresh" content="0;url=${pageContext.request.contextPath}/ventas.jsp"> -->
 
-        <div class="container text-center my-5">
-            <a class="tiendavirtual" href="index.jsp"><img style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg" class="img-luid" alt=""></a>
-        </div>
-    </body>
-</html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <section class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7  text-center">
-                <h1 style="color:white" >BIENVENIDO ADMINISTRADOR</h1>
-              
-                
-                    <p style="color:white"> Iniciar sesiÃ³n</p>
+<!-- Bootstrap CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Chewy&family=Lobster&family=Overlock:ital@1&family=Yeseva+One&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+<title>Website</title>
+</head>
+<body style="background: url(Imagen/cafe1.jpg)">
 
-                    <input type="email" placeholder="email@email.com" class="form-control my-3 p-4 text-center">
-                    <input type="password" placeholder="********" class="form-control my-3 p-4 text-center">
-                    <a type="button" class="btn btn-success "  href="usuarios.jsp" >Ingresar</a>
-                    
+	<%!
+    String ced="", cliente="";
+    
+    %>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<%
+if(request.getParameter("men")!=null){
+cliente="";
+ced="";
+String mensaje=request.getParameter("men");
+out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
+}
+%>
+
+
+
+
+	<div class="container text-center my-5">
+		<a class="tiendavirtual" href="index.jsp"><img
+			style="border-radius: 20px;" src="Imagen/LogoPrinci.jpg"
+			class="img-luid" alt=""></a>
+	</div>
+
+
+	<section>
+
+		<div class="container">
+
+
+			<div class="row justify-content-center">
+				<div class="col-lg-7  text-center">
+					<h1 style="color: white">BIENVENIDO ADMINISTRADOR</h1>
+					<h1 style="color: white">inicio sesión</h1>
+					<div class="col my-3 text-center">
+
+
+						<form action="Control_login" method="post">
+
+							<!--  Ingresando admininicial -->
+							<input type="text" placeholder="Usuario o Correo Electronico"
+								name="Correo" class="form-control my-3 p-4 text-center">
+
+
+							<!--  Ingresando contraseña admin123456 -->
+
+							<input type="password" name="Contraseña" placeholder="********"
+								class="form-control my-3 p-4 text-center"> 
+								
+							<input type="submit" name="Ingreso" value="Ingresar"
+								class="btn btn-success mt-3px mb-5 text-center"> <a
+								href="Login.jsp"></a>
+						</form>
+					</div>
 				</div>
-            </div>
-        </div>
+			</div>
 
-    </section>
+		</div>
 
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"></script>
+
+	</section>
+</body>
+</html>

@@ -1,6 +1,7 @@
 package Controlador;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import javax.swing.JOptionPane;
 
 import Modelo.clientesDAO;
 import Modelo.clientesDTO;
+
 
 
 /**
@@ -37,10 +39,10 @@ public class controlador_clientes extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		clientesDAO clientDao= new clientesDAO(); 
+
 		if(request.getParameter("crear")!=null) {
 		String nombre,cedula,correo,telefono,direccion;
 		
-	
 		cedula = request.getParameter("cedula");
 		direccion = request.getParameter("direccion");
 		correo = request.getParameter("correo");
@@ -63,6 +65,7 @@ public class controlador_clientes extends HttpServlet {
 			
 			cedula_u=request.getParameter("cedula");
 			clientesDTO Auxdto=clientDao.Buscar_Cliente(cedula_u);
+			if(Auxdto!=null) {
 			cedula_u=Auxdto.getCedula();
 			direccion= Auxdto.getDireccion();
 		    correo = Auxdto.getCorreo();
@@ -71,7 +74,13 @@ public class controlador_clientes extends HttpServlet {
 			
 			response.sendRedirect("clientes.jsp?cedula="+cedula_u+"&&direccion="+direccion+"&&correo="
 			+correo+"&&nombre="+nombre+"&&telefono="+telefono);
+	}else {
+		response.sendRedirect("clientes.jsp?men=El cliente no existe");
 	}
+		}
+		
+		
+		
 		
 		if(request.getParameter("actualizar")!=null) {
 		String cedula,nombre,correo,direccion,telefono;

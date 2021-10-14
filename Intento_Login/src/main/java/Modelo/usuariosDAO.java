@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -18,20 +19,21 @@ public class usuariosDAO {
 	public boolean Crear_Usuario(usuariosDTO user) {
 	    boolean resul=false;
 		try {
-		String sql="insert into Usuarios values(?,?,?,?,?)";
-		ps = con.prepareStatement(sql);
-		ps.setString(1, user.getCedula());
-		ps.setString(2, user.getCorreo());
+			String sql="Insert into Usuarios values(?,?,?,?,?)";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, user.getCedula());
+			ps.setString(2, user.getCorreo());
 			ps.setString(3, user.getNombre());
-		ps.setString(4, user.getContrasenia());
-		ps.setString(5, user.getUsers());
-		
-		resul=ps.executeUpdate()>0;	
+			ps.setString(4, user.getContrasenia());
+			ps.setString(5, user.getUsers());
+			resul = ps.executeUpdate()>0;
+			JOptionPane.showMessageDialog(null, "Exito al insertar");
 		}catch(SQLException ex) {
-			JOptionPane.showMessageDialog(null,"error al insertar: "+ex);
+			JOptionPane.showMessageDialog(null, "Error al insertar"+ ex);
 		}
 		return resul;
 	}
+	
 	
 	public usuariosDTO Buscar_Usuario(String cedula) {
 		
@@ -83,6 +85,26 @@ public class usuariosDAO {
 		}
 		return resul;
 	}
+	
+	
+public ArrayList<usuariosDTO> cargar_select(){
+		
+		usuariosDTO user=null;
+		ArrayList<usuariosDTO> lista= new ArrayList<>();
+		try {
+		String sql="select * from Usuarios";
+		ps= con.prepareStatement(sql);
+		res=ps.executeQuery();
+		while(res.next()) {
+			user= new usuariosDTO(res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getString(5));
+		    lista.add(user);
+		}
+		}catch(SQLException ex) {}
+		
+		return lista;
+	}
+
+
 
 	
 }
