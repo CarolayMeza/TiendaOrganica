@@ -38,7 +38,9 @@ public class controlador_users extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		usuariosDAO userDao = new usuariosDAO();
+		
 		if (request.getParameter("crear") != null) {
 			String nombre, cedulaAux, correo, auxUsuarios;
 			String contrasenia;

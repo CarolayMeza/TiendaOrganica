@@ -16,7 +16,9 @@
 <%-- fin de cabecero --%>
 <%--Aqui inicia nuestro codigo para los datos que necesitamos pedir --%>
 
-<body class="Form my-3 mx-7" style="background: url(Imagen/cafe1.jpg)">
+<body>
+
+<section class="Form my-3 mx-7" style="background: url(Imagen/image.jpg)">
 
 
 	<div class="container my-3 mx-7">
@@ -46,7 +48,7 @@
 				<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
 					de usuarios</h1>
 					<table id="tabla1" style="color: white"
-				class="font-weight-bold py-3 text-center">
+				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
 
 			</table>
 		</div>
@@ -54,21 +56,22 @@
 
 	<div class="container">
 		<div class="row">
-			<h1 style="color: White" class="font-weight-bold py-3 text-center">Listado
-				de clientes</h1>
+			<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
+				de clientes</h1>  
 			<table id="tabla2" style="color: white"
-				class="font-weight-bold py-3 text-center">
+				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
+			
 			</table>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<h1 style="color: White" class="font-weight-bold py-3 text-center">Venta
+			<h1 style="color: white" class="font-weight-bold py-3 text-center">Venta
 				por cliente</h1>
 			<table id="#" style="color: white"
-				class="font-weight-bold py-3 text-center">
+				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
 			</table>
 		</div>
 	</div>
-
+</section>
 </body>

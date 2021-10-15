@@ -41,40 +41,34 @@
 
 
 
-	<%!String mensaje="";
-  String cedula="",direccion="",correo="",nombre="",estado="",telefono="";
-
-%>
+	<%!String mensaje = "";
+	String cedula = "", direccion = "", correo = "", nombre = "", estado = "", telefono = "";%>
 
 	<%
-if(request.getParameter("cedula")!=null){
-cedula=request.getParameter("cedula");
-direccion= request.getParameter("direccion");
-correo=request.getParameter("correo");
-nombre=request.getParameter("nombre");
-telefono=request.getParameter("telefono");
-estado="disabled";
-}
-%>
+	if (request.getParameter("cedula") != null) {
+		cedula = request.getParameter("cedula");
+		direccion = request.getParameter("direccion");
+		correo = request.getParameter("correo");
+		nombre = request.getParameter("nombre");
+		telefono = request.getParameter("telefono");
+		estado = "disabled";
+	}
+	%>
 	<%
-if(request.getParameter("men")!=null){
-cedula="";
-direccion="";
-correo="";
-nombre="";
-telefono="";
-estado="";
+	if (request.getParameter("men") != null) {
+		cedula = "";
+		direccion = "";
+		correo = "";
+		nombre = "";
+		telefono = "";
+		estado = "";
 
-mensaje=request.getParameter("men");
-out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
-}
-%>
+		mensaje = request.getParameter("men");
+		out.print("<script>alert('" + mensaje + "');</script>");//Mensaje con alert js
+	}
+	%>
 
-	<%
-if (request.getParameter("men")!=null)
-mensaje = request.getParameter("men");
-%>
-
+	
 
 	<section class="Form my-3 mx-7"
 		style="background: url(Imagen/cafe1.jpg)">
@@ -134,20 +128,20 @@ mensaje = request.getParameter("men");
 
 
 								<div class="col-sm my-3">
-									<button type="submit" class="btn btn-success mt-3px mb-5" name="buscar"
-										value="buscar">consultar</button>
-								</div>
-								<div class="col-sm my-3">
-									<button type="submit" class="btn btn-success mt-3px mb-5" name="crear"
-										value="Crear">crear</button>
+									<button type="submit" class="btn btn-success mt-3px mb-5"
+										name="buscar" value="buscar">consultar</button>
 								</div>
 								<div class="col-sm my-3">
 									<button type="submit" class="btn btn-success mt-3px mb-5"
-										name="actualizar" value="Actualizar">actualizar</button>
+										name="crear" value="crear">crear</button>
 								</div>
 								<div class="col-sm my-3">
-									<button type="submit" class="btn btn-success mt-3px mb-5" name="borrar"
-										value="borrar">borrar</button>
+									<button type="submit" class="btn btn-success mt-3px mb-5"
+										name="actualizar" value="actualizar">actualizar</button>
+								</div>
+								<div class="col-sm my-3">
+									<button type="submit" class="btn btn-success mt-3px mb-5"
+										name="borrar" value="borrar">borrar</button>
 								</div>
 							</div>
 						</div>

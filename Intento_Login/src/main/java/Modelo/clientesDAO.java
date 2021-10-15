@@ -46,8 +46,7 @@ public class clientesDAO {
 			user = new clientesDTO(res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getString(5));
 		}
 		}catch(SQLException e) {
-//			JOptionPane.showMessageDialog(null,"Error al consultar" +e.getMessage());
-			System.out.println("Error al Consultar = "+e.getMessage());
+			JOptionPane.showMessageDialog(null,"Error al consultar" +e.getMessage());
 		}
 	
 		return user;

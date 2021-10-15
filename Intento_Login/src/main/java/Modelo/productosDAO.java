@@ -18,7 +18,7 @@ public class productosDAO {
 	PreparedStatement ps= null;
 	ResultSet res= null;
 	
-	//INSERTA LIBRO 
+	//INSERTA PRODUCTOS
 	public boolean Inserta_Producto(productosDTO product) {
 	    boolean resul=false;
 		try {
@@ -62,7 +62,7 @@ public productosDTO Buscar_Producto(int codigo) {
 public boolean Actualizar_Producto(productosDTO product) {
     boolean resul=false;
 	try {
-	String sql="update Productos set  iva_compra=?, nit_proveedor=?, nombre_producto=?,precio_compra=?,precio_venta=? where codigo_producto=?";
+	String sql="update Productos set   nit_proveedor=?, iva_compra=?, nombre_producto=?,precio_compra=?,precio_venta=? where codigo_producto=?";
 	ps = con.prepareStatement(sql);
 	
 	ps.setDouble(1, product.getIvacompra());

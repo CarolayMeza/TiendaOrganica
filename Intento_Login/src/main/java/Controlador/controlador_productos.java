@@ -80,15 +80,14 @@ public class controlador_productos extends HttpServlet {
 			codigo=Integer.parseInt(request.getParameter("codigo"));
 			productosDTO auxDto=prodDao.Buscar_Producto(codigo);
 			codigo=auxDto.getCodigo_producto();
-			iva= auxDto.getIvacompra(); 
 		    nit = (auxDto.getNitproveedor());
+		    iva= auxDto.getIvacompra(); 
 			nombre = auxDto.getNombre_producto();
 			Pcompra= auxDto.getPrecio_compra(); 
 			Pventa= auxDto.getPrecio_venta(); 
 
 			
-			response.sendRedirect("tablaproductos.jsp?codigo="+codigo+"&&iva="+iva+"&&nit="
-			+nit+"&&nombre="+nombre+"&&Pcompra="+Pcompra+"&&Pventa="+Pventa);
+			response.sendRedirect("tablaproductos.jsp?codigo="+codigo+"&&nit="+nit+"&&iva="+iva+"&&nombre="+nombre+"&&Pcompra="+Pcompra+"&&Pventa="+Pventa);
 	}
 		
 		
