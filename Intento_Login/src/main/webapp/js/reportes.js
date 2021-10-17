@@ -100,8 +100,6 @@ $(document).ready(function(){
 		tabla3.innerHTML+=`<tr>
 		<td>${venta.cedula_cliente}</td>
 		<td>${venta.cedula_usuario}</td>
-		<td>${venta.iva_venta}</td>
-		<td>${venta.total_venta}</td>
 		<td>${venta.valor_ventaV}</td>
 		</tr>`
 			}

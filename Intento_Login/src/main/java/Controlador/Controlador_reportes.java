@@ -64,7 +64,6 @@ public class Controlador_reportes extends HttpServlet {
 			lista3 = vent.cargar_select();
 			salida.println(datos.toJson(lista3));
 		}
-
+		
 	}
-
 }

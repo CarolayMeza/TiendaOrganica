@@ -22,7 +22,7 @@ public ArrayList<reporteventaDTO> cargar_select(){
 			reporteventaDTO venta=null;
 			ArrayList<reporteventaDTO> lista3= new ArrayList<>();
 			try {
-			String sql="select sum(total_venta) from Ventas group by cedula_usuario";
+			String sql="select c.cedula_cliente, c.nombre_cliente, sum(v.total_venta) from Clientes as c inner join Ventas as v on c.cedula_cliente=v.cedula_cliente group by v.cedula_cliente;";
 			ps= con.prepareStatement(sql);
 			res=ps.executeQuery();
 			while(res.next()) {

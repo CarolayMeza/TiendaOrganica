@@ -40,6 +40,8 @@ public class detalleventaDTO {
 			this.valor_iva = valor_iva;
 		}
 
+
+
 		public int getCod_detalleventa() {
 			return cod_detalleventa;
 		}
@@ -95,6 +97,7 @@ public class detalleventaDTO {
 		public void setValor_iva(double valor_iva) {
 			this.valor_iva = valor_iva;
 		}
+		
 		
 		
 

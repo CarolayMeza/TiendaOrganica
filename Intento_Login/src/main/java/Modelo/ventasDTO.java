@@ -35,7 +35,7 @@ public class ventasDTO {
 		Total_venta = total_venta;
 		Valor_ventaV = valor_ventaV;
 	}
-
+	
 
 
 	public ventasDTO(int codigo_venta) {

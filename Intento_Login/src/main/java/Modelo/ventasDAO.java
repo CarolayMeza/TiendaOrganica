@@ -107,6 +107,26 @@ public ventasDTO Buscar_venta(int codigo_venta) {
 	return user;
 }
 
+/**Detalle ventas DAO Metodo para traer total de las ventas. 
+public ventaDTO Buscar_total_Ventas(double Valor_total) {
+	
+	detalleventaDTO total_venta = null;
+	try {
+		String sql = "SELECT SUM(valor_total) TOTALVENTA FROM Detalle_ventas=?";
+		ps = con.prepareStatement(sql);
+		ps.setDouble(1, Valor_total);
+		res = ps.executeQuery();
+		while (res.next()) {
+			total_venta = new detalleventaDTO(res.getDouble(5));
+	
+		}
+	}catch (SQLException e) {
+		JOptionPane.showMessageDialog(null,"Error al consultar" +e.getMessage());
+		System.out.println("Error al Consultar = " + e.getMessage());
+	}
+
+	return total_venta;
+} */
 	
 	
 	

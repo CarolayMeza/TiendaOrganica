@@ -18,59 +18,70 @@
 
 <body>
 
-<section class="Form my-3 mx-7" style="background: url(Imagen/image.jpg)">
+	<section class="Form my-3 mx-7"
+		style="background: url(Imagen/image.jpg)">
 
 
-	<div class="container my-3 mx-7">
-		<div class="row my-3 mx-7">
+		<div class="container my-3 mx-7">
+			<div class="row my-3 mx-7">
 
-			<div class="col-sm my-3 text-center my-3 mx-7">
-				<button class="listaUsuarios btn btn-success"
-					class="btn btn-success col-sm" id="mensaje">Listar
-					usuarios</button>
-			</div>
+				<div class="col-sm my-3 text-center my-3 mx-7">
+					<button class="listaUsuarios btn btn-success"
+						class="btn btn-success col-sm" id="mensaje">Listar
+						usuarios</button>
+				</div>
 
-			<div class="col-sm my-3 text-center my-3 mx-7">
-				<button class="listaClientes  btn btn-success" id="mensaje1">Listar
-					clientes</button>
+				<div class="col-sm my-3 text-center my-3 mx-7">
+					<button class="listaClientes  btn btn-success" id="mensaje1">Listar
+						clientes</button>
 
-			</div>
+				</div>
 
-			<div class="col-sm my-3 text-center my-3 mx-7">
-				<button class="listaVentas btn btn-success"
-					 id="mensaje2"> Listar Ventas </button>
+				<div class="col-sm my-3 text-center my-3 mx-7">
+					<button class="listaVentas btn btn-success" id="mensaje2">
+						Listar Ventas</button>
 
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container">
-		<div class="row">
+		<div class="container">
+			<div class="row">
 				<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
 					de usuarios</h1>
-					<table id="tabla1" style="color: white"
-				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
+				<table id="tabla1" style="color: white"
+					class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
 
-			</table>
+				</table>
+			</div>
 		</div>
-	</div>
 
-	<div class="container">
-		<div class="row">
-			<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
-				de clientes</h1>  
-			<table id="tabla2" style="color: white"
-				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
-			
-			</table>
+		<div class="container">
+			<div class="row">
+				<h1 style="color: white" class="font-weight-bold py-3 text-center">Listado
+					de clientes</h1>
+				<table id="tabla2" style="color: white"
+					class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
+
+				</table>
+			</div>
 		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<h1 style="color: white" class="font-weight-bold py-3 text-center">Tabla Ventas </h1>
-			<table id="tabla3" style="color: white"
-				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
-			</table>
+		<div class="container">
+			<div class="row">
+				<h1 style="color: white" class="font-weight-bold py-3 text-center">Tabla
+					de ventas por cliente</h1>
+				<table id="tabla3" style="color: white"
+					class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
+				</table>
+				<div class="container" align="right">
+				<div class="col-lg-4" >
+					<div class="input-group my-3" >
+						<p >total venta:</p>
+						<input  type="number" class="form-control" placeholder="$ 0.000"
+							name="totalventa" id="totalventa" value="0">
+					</div>
+				</div>
+			</div>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 </body>
