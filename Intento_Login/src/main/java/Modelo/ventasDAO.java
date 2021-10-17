@@ -108,46 +108,7 @@ public ventasDTO Buscar_venta(int codigo_venta) {
 	return user;
 }
 }
-/**@SuppressWarnings("unused")
-public ArrayList<reporteventaDTO> ListaVentas(){
-	
-	reporteventaDTO venta=null;
-	ArrayList<reporteventaDTO> lista3= new ArrayList<>();
-	try {
-		String sql="select c.cedula_cliente, c.nombre_cliente, sum(v.total_venta) from Clientes as c inner join Ventas as v on c.cedula_cliente=v.cedula_cliente group by v.cedula_cliente;";
-		res=ps.executeQuery();
-		while(res.next()) {
-			venta= new reporteventaDTO(res.getDouble(1),res.getDouble(2),res.getString(3));
-		    lista3.add(venta);
-		}
-	}catch(SQLException ex) {
-		System.out.println("Error al consultar" +ex);
-	}
-	
-	return lista3;
-}
 
-//Metodo para traer el total de ventas 
-public ventasDTO total_ventas(Double Total_venta) {
-
-	ventasDTO user = null;
-	try {
-		String sql = "select sum(valor_venta) from Ventas;";
-		ps = con.prepareStatement(sql);
-		ps.setDouble(4, Total_venta);
-		res = ps.executeQuery();
-		while (res.next()) {
-			user = new ventasDTO((int) res.getDouble(4));
-		}
-	} catch (SQLException e) {
-		JOptionPane.showMessageDialog(null,"Error al consultar" +e.getMessage());
-		System.out.println("Error al Consultar = " + e.getMessage());
-	}
-
-	return user;
-}
-
-}*/
 	
 	
 

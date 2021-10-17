@@ -9,6 +9,7 @@
 <title>JSP Page</title>
 <%--Este es nuestra carpeta con solo link ahorrar lineas de codigo no generar sobrecarga--%>
 <jsp:include page="link/link.jsp" />
+
 </head>
 
 <%-- ESTE ES NUESTRO CABECERO --%>
@@ -72,16 +73,9 @@
 				<table id="tabla3" style="color: white"
 					class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
 				</table>
-				<div class="container" align="right">
-				<div class="col-lg-4" >
-					<div class="input-group my-3" >
-						<p >total venta:</p>
-						<input  type="number" class="form-control" placeholder="$ 0.000"
-							name="totalventa" id="listarventas" value="0">
+				
 					</div>
 				</div>
-			</div>
-			</div>
-		</div>
+			
 	</section>
 </body>

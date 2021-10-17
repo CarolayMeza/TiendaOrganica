@@ -91,6 +91,7 @@ $(document).ready(function(){
 	success:function(result2){
 		console.log(result2)
 				console.log(result2)
+				var totalventa=0;
 		var tabla3=document.querySelector("#tabla3")
 		tabla3.innerHTML='' 
 		tabla3.innerHTML+=`<tr>
@@ -99,20 +100,25 @@ $(document).ready(function(){
 		<th>Valor Total Ventas</th>
 		</tr>`
 		for(let venta of result2){
+			totalventa+=venta.valor_total_ventas;	
 		tabla3.innerHTML+=`<tr>
 		<td>${venta.cedula_cliente}</td>  
 		<td>${venta.nombre_cliente}</td>
 		<td>${venta.valor_total_ventas}</td>
 		</tr>`
 			}
-		}
-	
+		tabla3.innerHTML+=`<tr>
+		<td></td>
+		<td >Total Ventas</td>
+		<td >${totalventa}</td>
+		</tr>`
+	}
 	})
 }
 	
 	$('.listaVentas').on('click',function(){
 	listarVentas();
-});
+}); 
 
 
 
