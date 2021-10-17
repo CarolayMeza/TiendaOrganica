@@ -18,7 +18,7 @@ public class productosDAO {
 	PreparedStatement ps= null;
 	ResultSet res= null;
 	
-	//INSERTA PRODUCTOS
+	//INSERTA LIBRO 
 	public boolean Inserta_Producto(productosDTO product) {
 	    boolean resul=false;
 		try {
@@ -48,10 +48,10 @@ public productosDTO Buscar_Producto(int codigo) {
 		ps.setInt(1, codigo);
 		res=ps.executeQuery();
 		while(res.next()) {
-			product = new productosDTO(res.getInt(1),res.getDouble(2),res.getString(3),res.getString(4),res.getDouble(5),res.getDouble(6));
+			product = new productosDTO(res.getInt(1),res.getString(2),res.getDouble(3),res.getString(4),res.getDouble(5),res.getDouble(6));
 		}
 		}catch(SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al consultar producto" +e);
+		JOptionPane.showMessageDialog(null,"Error al consultar producto" +e);
 		}
 	
 		return product;
@@ -62,7 +62,7 @@ public productosDTO Buscar_Producto(int codigo) {
 public boolean Actualizar_Producto(productosDTO product) {
     boolean resul=false;
 	try {
-	String sql="update Productos set   nit_proveedor=?, iva_compra=?, nombre_producto=?,precio_compra=?,precio_venta=? where codigo_producto=?";
+	String sql="update Productos set  ivacompra=?, nitproveedor=?, nombre_producto=?,precio_compra=?,precio_venta=? where codigo_producto=?";
 	ps = con.prepareStatement(sql);
 	
 	ps.setDouble(1, product.getIvacompra());
@@ -123,7 +123,7 @@ public productosDTO Buscar_Producto2(productosDTO producto) {
 		//ps.setString(1, codigo);
 		res=ps.executeQuery();
 		while(res.next()) {
-			product = new productosDTO(res.getInt(1),res.getDouble(2),res.getString(3),res.getString(4),res.getDouble(5),res.getDouble(6));
+			product = new productosDTO(res.getInt(1),res.getString(2),res.getDouble(3),res.getString(4),res.getDouble(5),res.getDouble(6));
 		}
 		}catch(SQLException e) {
 			JOptionPane.showMessageDialog(null,"Error al consultar producto" +e);

@@ -3,7 +3,7 @@ package Controlador;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import javax.swing.JOptionPane;
+
 
 /**
  Esta es nuestra conexion 
@@ -23,7 +23,7 @@ public class Conexion {
 		conec= DriverManager.getConnection(url,user,pass);
 		//JOptionPane.showMessageDialog(null, "Conexion ok.....");
 		}catch(Exception e) {
-			JOptionPane.showMessageDialog(null, "Error en la Conexion....."+e);
+			//JOptionPane.showMessageDialog(null, "Error en la Conexion....."+e);
 		}
 		return conec;
 	}

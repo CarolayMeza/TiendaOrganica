@@ -15,8 +15,11 @@ import com.google.gson.Gson;
 
 import Modelo.clientesDAO;
 import Modelo.clientesDTO;
+import Modelo.reporteventaDAO;
+import Modelo.reporteventaDTO;
 import Modelo.usuariosDAO;
 import Modelo.usuariosDTO;
+
 
 /**
  * Servlet implementation class Controlador_reportes
@@ -54,6 +57,12 @@ public class Controlador_reportes extends HttpServlet {
 			ArrayList<clientesDTO> lista2 = new ArrayList<>();
 			lista2 = clie.cargar_select();
 			salida.println(datos.toJson(lista2));
+		}
+		if (op.equals("ventas")) {
+			reporteventaDAO vent = new reporteventaDAO();
+			ArrayList<reporteventaDTO> lista3 = new ArrayList<>();
+			lista3 = vent.cargar_select();
+			salida.println(datos.toJson(lista3));
 		}
 
 	}

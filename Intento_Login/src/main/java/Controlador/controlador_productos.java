@@ -42,30 +42,7 @@ public class controlador_productos extends HttpServlet {
 		productosDAO prodDao= new productosDAO(); 
 		
 		
-		//CREAR NUEVO PRODUCTO :(
-		/*
 		
-		if(request.getParameter("crear")!=null) {
-		String codigoP, nombreP, nitProv;
-		double ivaP, Precompra, Preventa;
-		 
-		codigoP = request.getParameter("codigo");
-		ivaP = Double.parseDouble(request.getParameter("iva"));
-		nitProv = (request.getParameter("nit"));
-		nombreP = request.getParameter("nombre");
-		Precompra = Double.parseDouble(request.getParameter("Pcompra"));
-		Preventa = Double.parseDouble(request.getParameter("Pventa"));
-
-		productosDTO prodDto = new productosDTO(codigoP,ivaP,nitProv,nombreP,Precompra,Preventa);
-		if(prodDao.Inserta_Producto(prodDto)) {
-			JOptionPane.showMessageDialog(null, "Producto Registrado Exitosamente.");
-			response.sendRedirect("tablaproductos.jsp?men=producto Registrado Exitosamente.");
-		}else {
-			JOptionPane.showMessageDialog(null, "El producto no se Registro.");
-			response.sendRedirect("tablaproductos.jsp?men=El producto no se Registro.");
-		}
-		}
-		*/
 	
 		
 		// CONSULTAR PRODUCTO 
@@ -80,14 +57,15 @@ public class controlador_productos extends HttpServlet {
 			codigo=Integer.parseInt(request.getParameter("codigo"));
 			productosDTO auxDto=prodDao.Buscar_Producto(codigo);
 			codigo=auxDto.getCodigo_producto();
+			iva= auxDto.getIvacompra(); 
 		    nit = (auxDto.getNitproveedor());
-		    iva= auxDto.getIvacompra(); 
 			nombre = auxDto.getNombre_producto();
 			Pcompra= auxDto.getPrecio_compra(); 
 			Pventa= auxDto.getPrecio_venta(); 
 
 			
-			response.sendRedirect("tablaproductos.jsp?codigo="+codigo+"&&nit="+nit+"&&iva="+iva+"&&nombre="+nombre+"&&Pcompra="+Pcompra+"&&Pventa="+Pventa);
+			response.sendRedirect("tablaproductos.jsp?codigo="+codigo+"&&iva="+iva+"&&nit="
+			+nit+"&&nombre="+nombre+"&&Pcompra="+Pcompra+"&&Pventa="+Pventa);
 	}
 		
 		
@@ -107,48 +85,19 @@ public class controlador_productos extends HttpServlet {
 			Preventa = Double.parseDouble(request.getParameter("Pventa"));
 			
 	
-			productosDTO prodDto_Act = new productosDTO(codigoP,ivaP,nitProv,nombreP,Precompra,Preventa);
+			productosDTO prodDto_Act = new productosDTO(codigoP,nitProv,ivaP,nombreP,Precompra,Preventa);
 		if(prodDao.Actualizar_Producto(prodDto_Act)) {
-			JOptionPane.showMessageDialog(null, "Producto se Actualizo Exitosamente.");
+		JOptionPane.showMessageDialog(null, "Producto se Actualizo Exitosamente.");
 			response.sendRedirect("tablaproductos.jsp?men=Producto Actualizado Exitosamente.");
 		}else {
-			JOptionPane.showMessageDialog(null, "El producto no se Modificó.");
+		JOptionPane.showMessageDialog(null, "El producto no se Modificó.");
 			response.sendRedirect("tablaproductos.jsp?men=El producto no se Modificó.");
 		}
 		}
 		
 		
 		
-	//	ELIMINAR PRODUCTO
-		/*
-	if (request.getParameter("borrar")!=null) {
-			
-			String auxcodigo;
-			auxcodigo=request.getParameter("cod");
-			
-			int op=JOptionPane.showConfirmDialog(null, "Desea eliminar el producto cod :"+auxcodigo);
-			if(op==0) {
-			if(prodDao.Eliminar_Producto(auxcodigo)) {
-				response.sendRedirect("tablaproducto.jsp?men=Producto Eliminado");
-				
-			}else {
-				response.sendRedirect("tablaproductos.jsp?men=producto no se Eliminó");
-
-			}
-			
-			
-		}else {
-			response.sendRedirect("tablaproductos.jsp");
-
-		}
-		
 	
-		
-	}
-		*/
-		
-		
-		
 		
 	//CARGAR ARCHIVOS
 
@@ -160,7 +109,7 @@ public class controlador_productos extends HttpServlet {
 			
 			
 			
-			JOptionPane.showMessageDialog(null, archivo.getContentType());
+		JOptionPane.showMessageDialog(null, archivo.getContentType());
 			if(archivo.getContentType().equals("text/plain")) {
 			try {
 				InputStream file=archivo.getInputStream();
@@ -175,15 +124,15 @@ public class controlador_productos extends HttpServlet {
 				escribir.close();
 				file.close();
 				
-				JOptionPane.showMessageDialog(null, "cargado correctamente..");
+			JOptionPane.showMessageDialog(null, "cargado correctamente..");
 				response.sendRedirect("productos.jsp?men=producto se cargó");
 				
 				if (prodDao.Cargar_Productos(url+nombre+".csv")) {
-					JOptionPane.showMessageDialog(null,"Registrado correctamente");
+				JOptionPane.showMessageDialog(null,"Registrado correctamente");
 					response.sendRedirect("productos.jsp?men=producto no se cargó");
 					
 				}else {
-					JOptionPane.showMessageDialog(null,"productos no se registraron");
+				JOptionPane.showMessageDialog(null,"productos no se registraron");
 					response.sendRedirect("productos.jsp?men=producto no se registro");
 				}
 			} catch (Exception e) {

@@ -78,5 +78,46 @@ $(document).ready(function(){
 	$('.listaClientes').on('click',function(){
 	listarClientes();
 });
+
+	function listarVentas(){
+	var men=document.getElementById("mensaje2").value	
+	$.ajax({
+	type:"post",
+	url:"Controlador_reportes",
+	dataType:"json",
+	data:{opcion:"ventas",mensaje2:men},
+	success:function(result2){
+		console.log(result2)
+				console.log(result2)
+		var tabla3=document.querySelector("#tabla3")
+		tabla3.innerHTML=''
+		tabla3.innerHTML+=`<tr>
+		<th>Cedula</th>
+		<th>Nombre </th>
+		<th>Valor Total Ventas</th>
+		</tr>`
+		for(let venta of result2){
+		tabla3.innerHTML+=`<tr>
+		<td>${venta.cedula_cliente}</td>
+		<td>${venta.cedula_usuario}</td>
+		<td>${venta.iva_venta}</td>
+		<td>${venta.total_venta}</td>
+		<td>${venta.valor_ventaV}</td>
+		</tr>`
+			}
+		}
+	
+	})
+}
+	
+	$('.listaVentas').on('click',function(){
+	listarVentas();
+});
+
+
+
 	
 	});
+	
+	
+	

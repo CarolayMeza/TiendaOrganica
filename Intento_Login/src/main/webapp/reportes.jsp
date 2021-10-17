@@ -37,8 +37,8 @@
 			</div>
 
 			<div class="col-sm my-3 text-center my-3 mx-7">
-				<a class="btn btn-success col-sm" type="button"
-					href="venclientes.jsp"> Venta por cliente</a>
+				<button class="listaVentas btn btn-success"
+					 id="mensaje2"> Listar Ventas </button>
 
 			</div>
 		</div>
@@ -66,9 +66,8 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<h1 style="color: white" class="font-weight-bold py-3 text-center">Venta
-				por cliente</h1>
-			<table id="#" style="color: white"
+			<h1 style="color: white" class="font-weight-bold py-3 text-center">Tabla Ventas </h1>
+			<table id="tabla3" style="color: white"
 				class="table-responsive table-bordered my-3 mx-7 font-weight-bold py-3 text-center">
 			</table>
 		</div>

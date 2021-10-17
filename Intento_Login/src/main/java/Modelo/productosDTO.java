@@ -3,8 +3,8 @@ package Modelo;
 public class productosDTO {
 
 	private int codigo_producto;
-	private double ivacompra;
 	private String nitproveedor;
+	private double ivacompra;
 	private String nombre_producto;
 	private double precio_compra;
 	private double precio_venta;
@@ -21,11 +21,11 @@ public class productosDTO {
 	}
 
 
-	public productosDTO(int codigo_producto, double ivacompra, String nitproveedor, String nombre_producto,
+	public productosDTO(int codigo_producto,String nitproveedor, double ivacompra,  String nombre_producto,
 			double precio_compra, double precio_venta) {
 		this.codigo_producto = codigo_producto;
-		this.ivacompra = ivacompra;
 		this.nitproveedor = nitproveedor;
+		this.ivacompra = ivacompra;
 		this.nombre_producto = nombre_producto;
 		this.precio_compra = precio_compra;
 		this.precio_venta = precio_venta;

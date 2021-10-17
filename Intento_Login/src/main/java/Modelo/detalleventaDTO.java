@@ -8,19 +8,35 @@ public class detalleventaDTO {
 		private int cantidadPro;
 		private int codigo_producto;
 		private int codigo_venta;
-		private double valor_ventaD;  //valor de ese producto
 		private double valor_total;
-		private double valor_iva;
+		private double valor_ventaD;  //valor de ese producto
+	    private double valor_iva;
 		
-		public detalleventaDTO(int cod_detalleventa, int cantidadPro, int codigo_producto, int codigo_venta,
-				double valor_ventaD, double valor_total, double valor_iva) {
+		public detalleventaDTO( int cantidadPro, int codigo_producto, int codigo_venta,
+			double valor_total,	double valor_ventaD , double valor_iva) {
 		
-			this.cod_detalleventa=cod_detalleventa;
+			
 			this.cantidadPro = cantidadPro;
 			this.codigo_producto = codigo_producto;
 			this.codigo_venta = codigo_venta;
-			this.valor_ventaD = valor_ventaD;
 			this.valor_total = valor_total;
+			this.valor_ventaD = valor_ventaD;
+			this.valor_iva = valor_iva;
+		}
+		
+		
+		
+		
+
+		public detalleventaDTO(int cod_detalleventa, int cantidadPro, int codigo_producto, int codigo_venta,
+				double valor_total, double valor_ventaD, double valor_iva) {
+			super();
+			this.cod_detalleventa = cod_detalleventa;
+			this.cantidadPro = cantidadPro;
+			this.codigo_producto = codigo_producto;
+			this.codigo_venta = codigo_venta;
+			this.valor_total = valor_total;
+			this.valor_ventaD = valor_ventaD;
 			this.valor_iva = valor_iva;
 		}
 
@@ -31,8 +47,6 @@ public class detalleventaDTO {
 		public void setCod_detalleventa(int cod_detalleventa) {
 			this.cod_detalleventa = cod_detalleventa;
 		}
-
-	
 
 		public int getCantidadPro() {
 			return cantidadPro;
@@ -50,7 +64,7 @@ public class detalleventaDTO {
 			this.codigo_producto = codigo_producto;
 		}
 
-		public int getCodigo_venta() {
+		public double getCodigo_venta() {
 			return codigo_venta;
 		}
 

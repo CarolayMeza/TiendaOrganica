@@ -46,7 +46,7 @@ public class controlador_proveedores extends HttpServlet {
 		
 		proveedoresDTO proveDto = new proveedoresDTO(nitpro,ciudad,direccion,nombre,telefono);
 		if(proveDao.Crear_Proveedor(proveDto)) {
-			JOptionPane.showMessageDialog(null, "Clientes Registrado Exitosamente.");
+		JOptionPane.showMessageDialog(null, "Clientes Registrado Exitosamente.");
 			response.sendRedirect("proveedores.jsp?men= proveedor Registrado Exitosamente.");
 		}else {
 			JOptionPane.showMessageDialog(null, "El Cliente no se Registro.");
@@ -81,10 +81,10 @@ public class controlador_proveedores extends HttpServlet {
 		
 		proveedoresDTO proveDto_Act = new proveedoresDTO(nitpro,ciudad,direccion,nombre,telefono);
 		if(proveDao.Actualizar_Proveedor(proveDto_Act)) {
-			JOptionPane.showMessageDialog(null, "Proveedor se Actualizo Exitosamente.");
+		JOptionPane.showMessageDialog(null, "Proveedor se Actualizo Exitosamente.");
 			response.sendRedirect("proveedores.jsp?men=proveedor Actualizado Exitosamente.");
 		}else {
-			JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
+		JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
 			response.sendRedirect("proveedores.jsp?men=El proveedor no se Modifico.");
 		}
 		}

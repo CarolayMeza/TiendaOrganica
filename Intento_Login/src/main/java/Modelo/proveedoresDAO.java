@@ -47,7 +47,7 @@ public class proveedoresDAO {
 			pro = new proveedoresDTO(res.getString(1),res.getString(2),res.getString(3),res.getString(4),res.getString(5));
 		}
 		}catch(SQLException e) {
-			JOptionPane.showMessageDialog(null,"Error al consultar" +e);
+	//		JOptionPane.showMessageDialog(null,"Error al consultar" +e);
 		}
 	
 		return pro;

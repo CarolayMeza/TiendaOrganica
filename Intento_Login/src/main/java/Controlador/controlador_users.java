@@ -38,9 +38,7 @@ public class controlador_users extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
 		usuariosDAO userDao = new usuariosDAO();
-		
 		if (request.getParameter("crear") != null) {
 			String nombre, cedulaAux, correo, auxUsuarios;
 			String contrasenia;
@@ -53,10 +51,10 @@ public class controlador_users extends HttpServlet {
 
 			usuariosDTO userDto = new usuariosDTO(cedulaAux, correo, nombre, contrasenia, auxUsuarios);
 			if (userDao.Crear_Usuario(userDto)) {
-				JOptionPane.showMessageDialog(null, "Usuario Registrado Exitosamente.");
+	//			JOptionPane.showMessageDialog(null, "Usuario Registrado Exitosamente.");
 				response.sendRedirect("usuarios.jsp?men= Usuario Registrado Exitosamente.");
 			} else {
-				JOptionPane.showMessageDialog(null, "El Usuario no se Registro.");
+	//			JOptionPane.showMessageDialog(null, "El Usuario no se Registro.");
 				response.sendRedirect("usuarios.jsp?men=El Usuario no se Registro.");
 			}
 		}
