@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 import Modelo.clientesDAO;
 import Modelo.clientesDTO;
@@ -51,10 +51,10 @@ public class controlador_clientes extends HttpServlet {
 		
 		clientesDTO clientDto = new clientesDTO(cedula,direccion,correo,nombre,telefono);
 		if(clientDao.Crear_Cliente(clientDto)) {
-			JOptionPane.showMessageDialog(null, "Clientes Registrado Exitosamente.");
+	//		JOptionPane.showMessageDialog(null, "Clientes Registrado Exitosamente.");
 			response.sendRedirect("clientes.jsp?men= Cliente Registrado Exitosamente.");
 		}else {
-			JOptionPane.showMessageDialog(null, "El Cliente no se Registro.");
+	//		JOptionPane.showMessageDialog(null, "El Cliente no se Registro.");
 			response.sendRedirect("clientes.jsp?men=El Cliente no se Registro.");
 		}
 		}
@@ -93,10 +93,10 @@ public class controlador_clientes extends HttpServlet {
 		
 		clientesDTO clientDto_Act = new clientesDTO(cedula_cliente,direccion,correo,nombre,telefono);
 		if(clientDao.Actualizar_Cliente(clientDto_Act)) {
-		JOptionPane.showMessageDialog(null, "Cliente se Actualizo Exitosamente.");
+	//	JOptionPane.showMessageDialog(null, "Cliente se Actualizo Exitosamente.");
 			response.sendRedirect("clientes.jsp?men=Cliente Actualizado Exitosamente.");
 		}else {
-		JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
+	//	JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
 			response.sendRedirect("clientes.jsp?men=El Cliente no se Modifico.");
 		}
 		}
@@ -107,7 +107,8 @@ public class controlador_clientes extends HttpServlet {
 			String cedula_cliente;
 			cedula_cliente=request.getParameter("cedula");
 			
-			int op=JOptionPane.showConfirmDialog(null, "Desea eliminar el Cliente de la :"+cedula_cliente);
+			int op = 0;
+			//	int op=JOptionPane.showConfirmDialog(null, "Desea eliminar el Cliente de la :"+cedula_cliente);
 			if(op==0) {
 			if(clientDao.Eliminar_Cliente(cedula_cliente)) {
 				response.sendRedirect("clientes.jsp?men=Usuario Eliminado");

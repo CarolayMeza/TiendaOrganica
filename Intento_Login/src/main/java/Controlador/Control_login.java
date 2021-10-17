@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 
 /**
@@ -37,10 +37,10 @@ public class Control_login extends HttpServlet {
 			usuario=request.getParameter("Correo");
 			password=request.getParameter("Contraseña");
 			if(usuario.equals("admininicial") && password.equals("admin123456")) {
-				JOptionPane.showMessageDialog(null, "Bienvenido administrador");
+		//		JOptionPane.showMessageDialog(null, "Bienvenido administrador");
 				response.sendRedirect("usuarios.jsp?nom"+usuario);
 			} else{
-				JOptionPane.showMessageDialog(null, "usuario o contraseña errados, intente de nuevo");
+		//		JOptionPane.showMessageDialog(null, "usuario o contraseña errados, intente de nuevo");
 				response.sendRedirect("index.jsp");
 			}
 				

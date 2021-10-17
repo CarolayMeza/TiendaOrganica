@@ -3,12 +3,12 @@ $(document).ready(function(){
 	
 	
 	function listarUsuarios(){
-	var men=document.getElementById("mensaje").value	
+	//var men=document.getElementById("mensaje").value	
 	$.ajax({
 	type:"post",
 	url:"Controlador_reportes",
 	dataType:"json",
-	data:{opcion:"usuarios",mensaje:men},
+	data:{opcion:"usuarios"},
 	success:function(result){
 		console.log(result)
 				console.log(result)
@@ -43,12 +43,12 @@ $(document).ready(function(){
 	
 		
 	function listarClientes(){
-	var men=document.getElementById("mensaje1").value	
+	//var men=document.getElementById("mensaje1").value	
 	$.ajax({
 	type:"post",
 	url:"Controlador_reportes",
 	dataType:"json",
-	data:{opcion:"clientes",mensaje1:men},
+	data:{opcion:"clientes"},
 	success:function(result1){
 		console.log(result1)
 				console.log(result1)
@@ -82,12 +82,12 @@ $(document).ready(function(){
 
 
 	function listarVentas(){
-	var men=document.getElementById("mensaje2").value	
+	//var men=document.getElementById("mensaje2").value	
 	$.ajax({
 	type:"post",
 	url:"Controlador_reportes",
 	dataType:"json",
-	data:{opcion:"ventas",mensaje2:men},
+	data:{opcion:"ventas"},
 	success:function(result2){
 		console.log(result2)
 				console.log(result2)

@@ -84,7 +84,7 @@ public class controlador_proveedores extends HttpServlet {
 		JOptionPane.showMessageDialog(null, "Proveedor se Actualizo Exitosamente.");
 			response.sendRedirect("proveedores.jsp?men=proveedor Actualizado Exitosamente.");
 		}else {
-		JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
+	JOptionPane.showMessageDialog(null, "El Cliente no se Modifico.");
 			response.sendRedirect("proveedores.jsp?men=El proveedor no se Modifico.");
 		}
 		}
@@ -95,7 +95,8 @@ public class controlador_proveedores extends HttpServlet {
 			String nitpro;
 			nitpro=request.getParameter("nit");
 			
-			int op=JOptionPane.showConfirmDialog(null, "Desea eliminar el Cliente de la :"+nitpro);
+			int op=0;
+			JOptionPane.showConfirmDialog(null, "Desea eliminar el Cliente de la :"+nitpro);
 			if(op==0) {
 			if(proveDao.Eliminar_Proveedor(nitpro)) {
 				response.sendRedirect("proveedores.jsp?men=proveedor Eliminado");

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 import Modelo.productosDAO;
 import Modelo.productosDTO;
@@ -87,10 +87,10 @@ public class controlador_productos extends HttpServlet {
 	
 			productosDTO prodDto_Act = new productosDTO(codigoP,nitProv,ivaP,nombreP,Precompra,Preventa);
 		if(prodDao.Actualizar_Producto(prodDto_Act)) {
-		JOptionPane.showMessageDialog(null, "Producto se Actualizo Exitosamente.");
+	//	JOptionPane.showMessageDialog(null, "Producto se Actualizo Exitosamente.");
 			response.sendRedirect("tablaproductos.jsp?men=Producto Actualizado Exitosamente.");
 		}else {
-		JOptionPane.showMessageDialog(null, "El producto no se Modificó.");
+	//	JOptionPane.showMessageDialog(null, "El producto no se Modificó.");
 			response.sendRedirect("tablaproductos.jsp?men=El producto no se Modificó.");
 		}
 		}
@@ -109,7 +109,7 @@ public class controlador_productos extends HttpServlet {
 			
 			
 			
-		JOptionPane.showMessageDialog(null, archivo.getContentType());
+	//	JOptionPane.showMessageDialog(null, archivo.getContentType());
 			if(archivo.getContentType().equals("text/plain")) {
 			try {
 				InputStream file=archivo.getInputStream();
@@ -124,22 +124,22 @@ public class controlador_productos extends HttpServlet {
 				escribir.close();
 				file.close();
 				
-			JOptionPane.showMessageDialog(null, "cargado correctamente..");
+	//		JOptionPane.showMessageDialog(null, "cargado correctamente..");
 				response.sendRedirect("productos.jsp?men=producto se cargó");
 				
 				if (prodDao.Cargar_Productos(url+nombre+".csv")) {
-				JOptionPane.showMessageDialog(null,"Registrado correctamente");
+		//		JOptionPane.showMessageDialog(null,"Registrado correctamente");
 					response.sendRedirect("productos.jsp?men=producto no se cargó");
 					
 				}else {
-				JOptionPane.showMessageDialog(null,"productos no se registraron");
+		//		JOptionPane.showMessageDialog(null,"productos no se registraron");
 					response.sendRedirect("productos.jsp?men=producto no se registro");
 				}
 			} catch (Exception e) {
-					JOptionPane.showMessageDialog(null,"error al cargar el archivo"+e);
+		//			JOptionPane.showMessageDialog(null,"error al cargar el archivo"+e);
 			}
 			
-			}else {JOptionPane.showMessageDialog (null, "Formato de Archivo no permitido");
+		//	}else {JOptionPane.showMessageDialog (null, "Formato de Archivo no permitido");
 				
 			}
 		}

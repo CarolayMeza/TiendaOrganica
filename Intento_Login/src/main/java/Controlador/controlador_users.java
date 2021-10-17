@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 import Modelo.usuariosDAO;
 import Modelo.usuariosDTO;
@@ -90,10 +90,10 @@ public class controlador_users extends HttpServlet {
 
 			usuariosDTO userDto_Act = new usuariosDTO(cedula, correo, nombre, contrasenia, usuarios);
 			if (userDao.Actualizar_Usuario(userDto_Act)) {
-				JOptionPane.showMessageDialog(null, "Usuario se Actualizo Exitosamente.");
+//				JOptionPane.showMessageDialog(null, "Usuario se Actualizo Exitosamente.");
 				response.sendRedirect("usuarios.jsp?men=Usuario Actualizado Exitosamente.");
 			} else {
-				JOptionPane.showMessageDialog(null, "El Usuario no se Modifico.");
+//				JOptionPane.showMessageDialog(null, "El Usuario no se Modifico.");
 				response.sendRedirect("Usuarios.jsp?men=El Usuario no se Modifico.");
 			}
 		}
@@ -103,7 +103,8 @@ public class controlador_users extends HttpServlet {
 			String auxcedula;
 			auxcedula = request.getParameter("cedula");
 
-			int op = JOptionPane.showConfirmDialog(null, "Desea eliminar el Usuario de la :" + auxcedula);
+			int op = 0;
+					//JOptionPane.showConfirmDialog(null, "Desea eliminar el Usuario de la :" + auxcedula);
 			if (op == 0) {
 				if (userDao.Eliminar_Usuario(auxcedula)) {
 					response.sendRedirect("usuarios.jsp?men=Usuario Eliminado");
