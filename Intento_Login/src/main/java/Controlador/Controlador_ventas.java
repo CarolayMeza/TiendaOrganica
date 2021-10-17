@@ -44,7 +44,7 @@ public class Controlador_ventas extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		PrintWriter salida= response.getWriter();
+		//PrintWriter salida= response.getWriter();
 		
 		//CONSULTA DE CLIENTE
 		if (request.getParameter("consultarC") != null) {

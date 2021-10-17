@@ -15,11 +15,11 @@ $(document).ready(function(){
 		var tabla=document.querySelector("#tabla1")
 		tabla.innerHTML=''
 		tabla.innerHTML+=`<tr>
-		<th>cedula_usuarios</th>
-		<th>email usuario</th>
-		<th>nombre usuario</th>
-		<th>contraseña</th>
-		<th>usuario</th>
+		<th>Cedula usuarios</th>
+		<th>Email usuario</th>
+		<th>Nombre usuario</th>
+		<th>Contraseña</th>
+		<th>Usuario</th>
 		</tr>`
 		for(let user of result){
 		tabla.innerHTML+=`<tr>
@@ -55,11 +55,11 @@ $(document).ready(function(){
 		var tabla=document.querySelector("#tabla2")
 		tabla2.innerHTML=''
 		tabla2.innerHTML+=`<tr>
-		<th>cedula_cliente</th>
-		<th>dirección cliente</th>
-		<th>email cliente</th>
-		<th>nombre cliente</th>
-		<th>telefono cliente</th>
+		<th>Cedula cliente</th>
+		<th>Dirección cliente</th>
+		<th>Email cliente</th>
+		<th>Nombre cliente</th>
+		<th>Telefono cliente</th>
 		</tr>`
 		for(let cliente of result1){
 		tabla2.innerHTML+=`<tr>
@@ -79,6 +79,8 @@ $(document).ready(function(){
 	listarClientes();
 });
 
+
+
 	function listarVentas(){
 	var men=document.getElementById("mensaje2").value	
 	$.ajax({
@@ -90,7 +92,7 @@ $(document).ready(function(){
 		console.log(result2)
 				console.log(result2)
 		var tabla3=document.querySelector("#tabla3")
-		tabla3.innerHTML=''
+		tabla3.innerHTML='' 
 		tabla3.innerHTML+=`<tr>
 		<th>Cedula</th>
 		<th>Nombre </th>
@@ -98,9 +100,9 @@ $(document).ready(function(){
 		</tr>`
 		for(let venta of result2){
 		tabla3.innerHTML+=`<tr>
-		<td>${venta.cedula_cliente}</td>
-		<td>${venta.cedula_usuario}</td>
-		<td>${venta.valor_ventaV}</td>
+		<td>${venta.cedula_cliente}</td>  
+		<td>${venta.nombre_cliente}</td>
+		<td>${venta.valor_total_ventas}</td>
 		</tr>`
 			}
 		}

@@ -77,7 +77,7 @@
 					<div class="input-group my-3" >
 						<p >total venta:</p>
 						<input  type="number" class="form-control" placeholder="$ 0.000"
-							name="totalventa" id="totalventa" value="0">
+							name="totalventa" id="listarventas" value="0">
 					</div>
 				</div>
 			</div>
